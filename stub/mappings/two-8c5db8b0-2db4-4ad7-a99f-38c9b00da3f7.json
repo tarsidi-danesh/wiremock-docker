@@ -1,0 +1,15 @@
+{
+  "id" : "8c5db8b0-2db4-4ad7-a99f-38c9b00da3f7",
+  "request" : {
+    "url" : "/soap",
+    "method" : "POST"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{ \"searchParams\": \"{{soapXPath request.body '/a/test/text()'}}\", \"randomAlphaNumeric\": \"{{randomValue length=33 type='ALPHANUMERIC'}}\" }",
+    "transformers": ["response-template"]
+  },
+  "uuid" : "8c5db8b0-2db4-4ad7-a99f-38c9b00da3f7",
+  "persistent" : false,
+  "insertionIndex" : 1
+}

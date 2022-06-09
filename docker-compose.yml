@@ -1,0 +1,16 @@
+version: "3.0"
+services:
+  wiremock:
+    image: "wiremock/wiremock:2.33.2"
+    ports:
+      - "8080:8080"
+    volumes:
+      - type: bind
+        source: ./stub
+        target: /home/wiremock
+      - type: bind
+        source: ./ext
+        target: /var/wiremock/extensions
+
+    entrypoint: /docker-entrypoint.sh --global-response-templating
+    # entrypoint: /docker-entrypoint.sh --extensions com.opentable.extension.BodyTransformer
